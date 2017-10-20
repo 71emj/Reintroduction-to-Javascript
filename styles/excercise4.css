@@ -10,16 +10,17 @@ body {
 
 p {
     font-family: "Source Serif", "Times New Roman", serif;
+    font-size: 1rem;
 }
 
 /* an extensionto the original .css-animate class in the main.css */
 
 .css-animate {
-    --webkit-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
-    -moz-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
-    -ms-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
-    -o-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
-    transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
+    --webkit-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow linear 500ms;
+    -moz-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow linear 500ms;
+    -ms-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow linear 500ms;
+    -o-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow linear 500ms;
+    transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow linear 500ms;
 }
 
 /* the header style is defined within the main.css file, as part of the dominating 
@@ -30,7 +31,7 @@ p {
 .banner {
     position: relative;
     width: 100%;
-    height: 40.5rem;
+    height: 50vw;
     overflow: hidden;
 }
 
@@ -46,6 +47,7 @@ p {
 
 .video-album {
     opacity: 1;
+    height: 8vw;
 }
 
 .video-player {
@@ -56,10 +58,10 @@ p {
 
 .video-player--banner {
     position: absolute;
-    top: -5rem;
+    top: -50%;
     left: 0;
     width: 100%;
-    height: 54rem;
+    height: 100vw;
     z-index: -1;
 }
 
@@ -108,7 +110,7 @@ article.content-body {
     height: 4rem;
     width: 90%;
     margin: 3.75rem auto 4.5rem;
-    padding-left: 20%;
+    padding-left: 10vw;
     box-sizing: border-box;
 }
 
@@ -159,6 +161,7 @@ ul#image-gallery {
     height: 2rem;
     padding-left: 1.5px;
     font-family: "Source Serif", "Times New Roman", serif;
+    font-size: 0.85rem;
     line-height: 1.5;
 }
 
@@ -170,7 +173,12 @@ ul#image-gallery {
 }
 
 #footer .info {
-    padding: 2.5rem 4rem 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem 4rem 2rem;
     overflow: hidden;
 }
 
@@ -178,7 +186,6 @@ ul#image-gallery {
     display: inline-block;
     color: #3e3e3e;
     padding: 3px 12px 3px 6px;
-    margin-bottom: 2.8rem;
     background: #fff;
     box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 0.3);
 }
@@ -196,26 +203,25 @@ ul#image-gallery {
 #footer .info p {
     color: #fff;
     font-family: "Droid Sans", "Helvetica", sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 100;
     line-height: 1.5;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 }
 
 .external-links {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
     height: 100%;
 }
 
 .external-links a {
     color: #fff;
     font-family: "Droid Sans", "Helvetica", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 100;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 }
 
 .external-links a:hover {
@@ -224,13 +230,14 @@ ul#image-gallery {
 
 .external-links li {
     list-style: none;
-    line-height: 2;
+    line-height: 1.8;
 }
 
 .external-links .links {
-    padding: 2.5rem 4rem 2rem 0;
     height: inherit;
     overflow: hidden;
+    margin-right: 2rem;
+    padding: 3rem 4rem 2rem 0;
 }
 
 .external-links #youtube-logo {
@@ -240,8 +247,8 @@ ul#image-gallery {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top;
-    height: 1.8rem;
-    margin-bottom: 1rem;
+    height: 1.6rem;
+    margin-bottom: 1.2rem;
     cursor: pointer;
 }
 
@@ -252,31 +259,42 @@ ul#image-gallery {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left top;
-    height: 1.3rem;
-    margin-bottom: 1.5rem;
+    height: 1.2rem;
+    margin-bottom: 1.6rem;
     cursor: pointer;
 }
 
 
 
-@media only screen and (max-width: 1280px) {
-    .banner {
-        height: 36rem;
-    }
-
-    .video-player--banner {
-        top: -15%;
-        height: 48rem;
+@media screen and (max-width: 1280px) {
+    .external-links .links {
+        width: 42%;
+        padding: 3rem 0rem 2rem;
+        margin-right: 2rem;
     }
 }
 
-@media only screen and (max-width: 1080px) {
-    .banner {
-        height: 32rem;
+@media screen and (max-width: 960px) {
+    .external-links .links {
+        width: 38%;
+        margin-right: 1rem;
     }
 
-    .video-player--banner {
-        top: -15%;
-        height: 42.5rem;
+    #image-gallery li.four {
+        width: 48%;
+        height: 344px;
+    }
+
+    #image-gallery li>div img {
+        height: 300px;
+    }
+    
+    #footer .info>a {
+        padding: 3px 24px 3px 12px;
+        line-height: 1.1;
+    }
+
+    #footer .info>p {
+        display: none;
     }
 }

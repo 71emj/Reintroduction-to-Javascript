@@ -1,13 +1,15 @@
-(function() {
+(function () {
     "use strict";
 
-    //change blockquote text, every once in a while
+    // change blockquote text, every once in a while
 
     (function changingBlockQuoteText() {
         const blockQuote = document.querySelector('blockquote.blockquote'),
             blkQuoteText = document.querySelectorAll('span.blkquote-contents');
 
-        function randomSel(randomNum) { return Math.floor(Math.random() * randomNum) };
+        function randomSel(randomNum) {
+            return Math.floor(Math.random() * randomNum);
+        }
 
         function capitalizedQuote(string) {
             const regExp = new RegExp(/[a-zA-Z]/),
@@ -16,9 +18,9 @@
         }
 
         function fadeIn(target) {
-            return new Promise(function(resolve) {
+            return new Promise(function (resolve) {
                 target.style.opacity = 1;
-            })
+            });
         }
 
         function changeBlkQuote(timeOut, timeIn, prevText) {
@@ -32,9 +34,10 @@
 
             blockQuote.textContent = `" ${curText} "`;
 
-            fadeIn(blockQuote).then(setTimeout(function() {
+            fadeIn(blockQuote).then(setTimeout(function () {
                 blockQuote.style.opacity = 0;
-                setTimeout(function() {
+                // timeout is set exactly after css transisiton is executed, timeIn === 'opacity ease-in 2400ms'
+                setTimeout(function () {
                     return changeBlkQuote(timeOut, timeIn, curText);
                 }, timeIn); 
             }, timeOut));
@@ -44,14 +47,13 @@
 
     }());
 
-    //setting up youtube api 
+    // setting up youtube api 
 
     (function settingUpYoutubeAPI() {
 
         /* targets to manipulate in the original DOM tree*/
         const videoAlbum = document.querySelector('.video-album'),
-            albumBox = document.querySelector('.album-box'),
-            videoPlayer = document.querySelector('.video-player');
+            albumBox = document.querySelector('.album-box')
 
         /* setting up for youTube api */
         const scriptTag = document.createElement('script'),
@@ -62,9 +64,9 @@
 
         let player;
 
-        //the youtube api needs to be called under the window object
+        // the youtube object needs to be called under the window object
         window.onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-video', {
+            return player = new YT.Player('youtube-video', {
                 events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
@@ -81,10 +83,10 @@
         function timeEvent(timing, firstTarget, secondTarget) {
             return new Promise(function(resolve) {
                 resolve(
-                    setTimeout(function() {
+                    setTimeout(function () {
                         firstTarget.style.background = 'transparent';
+                        firstTarget.style.cursor = 'pointer';
                         secondTarget.style.opacity = 0;
-                        albumBox.style.cursor = 'pointer';
                     }, timing)
                 );
             });
@@ -104,14 +106,14 @@
                state of the youtube player) */
             switch (e.target.getPlayerState()) {
                 case 0:
-                    setTimeout(function() {
+                    setTimeout(function () {
                         e.target.playVideo();
                         console.log('Another playback starts now.');
                     }, 4000);
                     break;
                 case 1:
                     timeEvent(3000, albumBox, videoAlbum).then(function() {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             videoAlbum.style.opacity = 1;
                             albumBox.style.background = '#000';
                             albumBox.style.cursor = 'initial';
@@ -119,32 +121,23 @@
                         }, vidDuration);
                     });
                     break;
+                default:
+                    console.log('Video not playing...for some reason ;(');
             }
         }
 
         /* Since an invisible image is covering the video player to prevent hovering effect of 
            youtube player, this function reattached pause function to the layer */
         albumBox.addEventListener('click', function() {
-            if (player.getPlayerState() === 1) {
-                player.pauseVideo();
-            } else {
-                player.playVideo();
-            }
+            /* I replace the original piece of if/else statement 
+               with simple operator */
+            (player.getPlayerState() === 1 && player.pauseVideo())
+                || player.playVideo();
         })
 
     }());
 
-    /*  Create an object with breathing effect. just for fun, and perhaps some cool meme 
-        I can use in the future */
-
-    (function breathingObject() {
-
-    }());
-
 }());
-
-
-
 
 
 
