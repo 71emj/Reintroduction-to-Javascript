@@ -1,0 +1,98 @@
+main.container {
+	padding: 4rem 2rem;
+}
+
+main header#content-header {
+	margin-bottom: 3rem;
+}
+
+main h2.quotation {
+	line-height: 1.5;
+	font-size: 1.5rem;
+	padding: 0 2rem;
+}
+
+.quotation {
+	font-family: "Droid Sans", "Helvetica", sans-serif;
+	color: #4e4e4e;
+}
+
+article.content-body {
+	margin: 0;
+	margin-bottom: 3rem;
+	padding: 2rem;
+}
+
+header.title {
+	height: 36px;
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 0.5rem 0 0.3rem;
+	border-bottom: 1px solid lightgrey;
+}
+
+header.title>h3 {
+	margin-left: 1px;
+	font-family: "Droid Sans", "Helvetica", sans-serif;
+	font-size: 0.9rem;
+	line-height: 36px;
+	letter-spacing: .08rem;
+	color: #4e4e4e;
+	text-transform: uppercase;
+}
+
+div.body {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+
+.link-box {
+	margin: 1rem 0;
+	padding: 1rem;
+	border: 1px solid #9f9f9f;
+	font-size: 14px;
+}
+
+.link-box>p {
+	display: inline-block;
+	margin: 2% 0 0.75em;
+	padding-left: 1.5%;
+	font-family: "Varela Round", "Droid Sans", "Helvetica", sans-serif;
+	font-size: 1.25em;	
+	line-height: 1.5;
+	word-break: break-all;
+	overflow-wrap: break-word;
+	hyphens: manual;
+	color: #4e4e4e;
+}
+
+
+.link-box a>input[type="button"] {
+	float: right;
+	margin: 0.3rem 0 -1%;
+}
+
+.content-end {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.content-end>a {
+	display: inline-block;
+	padding: 0 1px;
+	font-family: "Quicksand", "Helvetica", sans-serif;
+	font-size: 0.9em;
+	font-weight: 500;
+	color: #ff0a0a;
+	box-sizing: border-box;
+}
+
+.content-end>a:hover {
+	color: #ff7878;
+}

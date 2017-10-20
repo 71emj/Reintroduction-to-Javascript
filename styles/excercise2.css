@@ -1,0 +1,94 @@
+label {
+	font-family: "Quicksand", "Droid Sans", "Helvetica", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 500;
+	line-height: 1.2;
+	text-transform: capitalize;
+	color: #747474;
+}
+
+#content>section.container {
+    max-width: 800px;
+    padding: 7rem 2rem;
+}
+
+#content-header>.quotation {
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+	padding: 0 2rem;
+	color: #4e4e4e;
+	text-transform: capitalize;
+}
+
+article.content-body {
+	padding: 3rem 2rem;
+	width: 100%;
+}
+
+article.content-body>form {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: inherit;
+}
+
+article.content-body>form input[type="text"] {
+	height: 72px;
+	padding: 0.8rem;
+	font-family: "Droid Sans", "Helvetica", sans-serif;
+	font-size: 1.2rem;
+	text-align: left;
+	border: 1.2px dashed #747474;
+    border-radius: 4px;
+}
+
+article.content-body>form input[type="text"]:focus {
+	border: 1.2px solid #1696da;
+}
+
+article.content-body>form input[type="submit"] {
+	float: right;
+	margin: 0.8rem 0;
+	border: 1.2px dashed #747474;
+    border-radius: 4px;
+}
+
+article.content-body>form input[type="submit"]:hover {
+	border: 1.2px dashed #a7a7a7;
+}
+
+article.content-body>ul {
+	margin: 5rem 0;
+	font-family: "Quicksand", "Droid Sans", "Helvetica", sans-serif;	
+	font-weight: 500;
+	text-align: left;
+	text-transform: capitalize;
+	list-style: none;
+}
+
+article.content-body>ul li {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-between;	
+	margin: 1rem 0;
+	padding-left: auto;
+}
+
+article.content-body>ul span {
+	display: inline-block;
+	height: auto; /* height = button.height */
+	line-height: 2;
+	text-align: center;
+	color: #555;
+	border: 1.2px dashed #747474;
+    border-radius: 4px;
+}
+
+article.content-body>ul button {
+	position: relative;
+	margin: 0 0;
+	display: inline-block;
+	border: 1.2px dashed #747474;
+    border-radius: 4px;
+}

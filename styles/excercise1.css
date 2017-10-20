@@ -1,0 +1,29 @@
+#content>section.container {
+    padding: 4em 2em;
+}
+
+#content-header>.quotation {
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+	color: #4e4e4e;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+article.content-body {
+	padding: 2em;
+}
+
+article.content-body>p {
+	margin: 2em 0 0.5em;
+	font-family: "Quicksand", "Droid Sans", "Helvetica", sans-serif;
+	font-size: 0.8em;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #505050; 	
+}
+
+#map_canvas {
+	height: 600px;
+	width: 100%;
+	overflow: initial;
+}

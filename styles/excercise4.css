@@ -1,0 +1,282 @@
+/* mega definition */
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+}
+
+p {
+    font-family: "Source Serif", "Times New Roman", serif;
+}
+
+/* an extensionto the original .css-animate class in the main.css */
+
+.css-animate {
+    --webkit-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
+    -moz-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
+    -ms-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
+    -o-transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
+    transition: opacity ease-in 2400ms, background ease-in 2400ms, box-shadow ease-in 200ms;
+}
+
+/* the header style is defined within the main.css file, as part of the dominating 
+   structure to the webpages */
+
+/* defining the video banner */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 40.5rem;
+    overflow: hidden;
+}
+
+.album-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+    background: #000;
+}
+
+.video-album {
+    opacity: 1;
+}
+
+.video-player {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.video-player--banner {
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    width: 100%;
+    height: 54rem;
+    z-index: -1;
+}
+
+/* main content of the page */
+
+main>section.container {
+    padding: 6rem 2rem;
+}
+
+/* define title of the text body */
+
+header.title {
+    height: 36px;
+    width: 100%;
+    margin: 2rem 0 6rem;
+}
+
+header.title>h2 {
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+    font-size: 2rem;
+    line-height: 36px;
+    letter-spacing: 0.1rem;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header.title sub {
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1;
+    color: #3e3e3e;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* define text body */
+
+article.content-body {
+    margin: 0 0 4rem;
+}
+
+.center-blockquote {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 90%;
+    margin: 3.75rem auto 4.5rem;
+    padding-left: 20%;
+    box-sizing: border-box;
+}
+
+.blockquote {
+    text-align: right;
+    font-size: 1.5rem;
+    width: 100%;
+    opacity: 0;
+    font-family: "Crimson Text", "Times New Roman", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* define image gallery */
+
+ul#image-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#image-gallery li {
+    height: 244px;
+    margin: 2rem 0 1rem;
+    padding: 0.2rem;
+    background: #f2f2f2;
+    border: 1px solid #cecece;
+}
+
+#image-gallery li>div {
+    text-align: center;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+#image-gallery li>div img {
+    width: auto;
+    height: 200px;
+    cursor: pointer;
+}
+
+#image-gallery li>figcaption {
+    display: inline-block;
+    height: 2rem;
+    padding-left: 1.5px;
+    font-family: "Source Serif", "Times New Roman", serif;
+    line-height: 1.5;
+}
+
+#footer>section.header-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer .info {
+    padding: 2.5rem 4rem 2rem;
+    overflow: hidden;
+}
+
+#footer .info>a {
+    display: inline-block;
+    color: #3e3e3e;
+    padding: 3px 12px 3px 6px;
+    margin-bottom: 2.8rem;
+    background: #fff;
+    box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 0.3);
+}
+
+#footer .info>a:hover {
+    box-shadow: 0px 0px 5px 0px rgba(215, 215, 215, 1);
+}
+
+#footer .info h3 {
+    font-family: "Source Serif", "Times New Roman", serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#footer .info p {
+    color: #fff;
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 100;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+}
+
+.external-links {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.external-links a {
+    color: #fff;
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+}
+
+.external-links a:hover {
+    text-decoration: underline;
+}
+
+.external-links li {
+    list-style: none;
+    line-height: 2;
+}
+
+.external-links .links {
+    padding: 2.5rem 4rem 2rem 0;
+    height: inherit;
+    overflow: hidden;
+}
+
+.external-links #youtube-logo {
+    position: relative;
+    top: 2px;
+    background: url(../images/youtube_plain.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+    height: 1.8rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.external-links #wikipedia-logo {
+    position: relative;
+    top: 7px;
+    background: url(../images/wiki_plain.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+    height: 1.3rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+    .banner {
+        height: 36rem;
+    }
+
+    .video-player--banner {
+        top: -15%;
+        height: 48rem;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .banner {
+        height: 32rem;
+    }
+
+    .video-player--banner {
+        top: -15%;
+        height: 42.5rem;
+    }
+}

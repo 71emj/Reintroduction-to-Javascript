@@ -1,0 +1,56 @@
+main {
+    padding: 4rem 2rem;
+}
+
+section.container {
+    max-width: 720px;
+}
+
+header#content-header {
+    margin: 2rem 0;
+}
+
+#content-header>.quotation {
+    font-family: "Droid Sans", "Helvetica", sans-serif;
+    padding: 0 2rem;
+    color: #4e4e4e;
+    text-transform: capitalize;
+}
+
+article.content-body {
+    padding: 0 2rem;
+}
+
+article.content-body>form {
+    display: block;
+    height: 3rem;
+}
+
+article.content-body>form label {
+    display: inline-block;
+    margin-right: 1.25rem;
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-weight: 500;
+    color: #fe7171;
+}
+
+article.content-body>form select {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+article.content-body .quotation {
+    margin: 5rem 0.5rem;
+    padding: 0;
+    text-align: center;
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+#text-display {
+    text-align: center;
+    line-height: 2;
+    font-family: 'Droid Sans', 'Helvetica', sans-serif;
+    color: #fe7171;
+}

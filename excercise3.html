@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans|Quicksand:400,500|Varela+Round|Work+Sans" type="text/css">
+    <link rel="stylesheet" href="styles/skeleton-grid.css" type="text/css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="stylesheet" href="styles/excercise3.css" type="text/css">
+</head>
+
+<body>
+    <header id="header">
+        <section class="header-footer container">
+            <a href="index.html" class="eight columns">
+                <h3 id="intro-line">
+					Reintroduction to Javascript, the Practice Area
+				</h3>
+            </a>
+            <nav class="four columns">
+                <a href="#">
+                    <button class="six">Page Top</button>
+                </a>
+                <a href="#footer">
+                    <button class="six">Page Bottom</button>
+                </a>
+                <a href="http://jslint.com/">
+                    <button>JSLint</button>
+                </a>
+            </nav>
+        </section>
+    </header>
+    <main id="content">
+        <section class="container">
+            <header id="content-header">
+                <h2 class="quotation">
+        			Ajax starting point
+        		</h2>
+            </header>
+            <!-- /header -->
+            <article class="content-body">
+                <form>
+                    <label for="verse-choose" class="three columns">
+                        Choose a verse :
+                    </label>
+                    <select name="verse-choose" id="verse-choose" class="nine columns" autofocus>
+                        <option value="" selected disabled hidden>-- Choose a verse you like --</option>
+                        <option value="verse-1">Verse 1</option>
+                        <option value="verse-2">Verse 2</option>
+                        <option value="verse-3">Verse 3</option>
+                        <option value="verse-4">Verse 4</option>
+                    </select>
+                </form>
+                <h3 class="quotation">
+            		The Conqueror Worm, <em>Edgar Allen Poe, 1843</em>
+            	</h3>
+                <pre id="text-display"></pre>
+            </article>
+        </section>
+    </main>
+    <script src="scripts/main-effect.js" type="text/javascript"></script>
+    <script src="scripts/excercise-3.js" type="text/javascript"></script>
+</body>
+
+</html>
